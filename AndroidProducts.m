@@ -11,3 +11,4 @@ COMMON_LUNCH_CHOICES := \
     pixys_miatoll-user \
     pixys_miatoll-userdebug \
     pixys_miatoll-eng
+
