@@ -27,6 +27,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
+# Maintainer
+DEVICE_MAINTAINER := MaheshTechnicals
+
 # Set this flag in build script
 ifeq ($(CURRENT_BUILD_TYPE), gapps)
 # Use Gapps
