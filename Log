@@ -1,0 +1,598 @@
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1021-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Apr  5 12:49:07 UTC 2022
+
+  System load:  0.37                Processes:             148
+  Usage of /:   53.0% of 496.04GB   Users logged in:       0  Memory usage: 5%                  IPv4 address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+4 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Apr  5 06:23:20 2022 from 27.0.52.110
+MaheshTechnicals@Ubuntu:~$ l
+MaheshTechnicals@Ubuntu:~/pixelOS/out/target/product/miatoll$ cd
+MaheshTechnicals@Ubuntu:~$ cd pixelOS/
+MaheshTechnicals@Ubuntu:~/pixelOS$ . build/envsetup.sh
+including vendor/aosp/vendorsetup.sh
+MaheshTechnicals@Ubuntu:~/pixelOS$ export USE_CCACHE=1
+MaheshTechnicals@Ubuntu:~/pixelOS$ lunch aosp_miatoll-userdebug
+Trying dependencies-only mode on a non-existing device tree?
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=12
+CUSTOM_VERSION=PixelOS_miatoll-12.1-20220405-1251
+TARGET_PRODUCT=aosp_miatoll
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm64
+TARGET_ARCH_VARIANT=armv8-2a
+TARGET_CPU_VARIANT=cortex-a76
+TARGET_2ND_ARCH=arm
+TARGET_2ND_ARCH_VARIANT=armv8-2a
+TARGET_2ND_CPU_VARIANT=cortex-a76
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-5.13.0-1021-azure-x86_64-Ubuntu-20.04.4-LTS
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=SP2A.220305.013.A3
+OUT_DIR=out
+PRODUCT_SOONG_NAMESPACES=vendor/xiaomi/sm6250-common device/xiaomi/sm6250-common device/xiaomi/sm6250-common vendor/xiaomi/miatoll device/xiaomi/miatoll hardware/qcom-caf/sm8150 vendor/qcom/opensource/commonsys/display vendor/qcom/opensource/commonsys-intf/display vendor/qcom/opensource/display vendor/qcom/opensource/data-ipa-cfg-mgr vendor/qcom/opensource/dataservices vendor/qcom/opensource/commonsys/packages/apps/Bluetooth vendor/qcom/opensource/commonsys/system/bt/conf vendor/qcom/opensource/commonsys/system/bt/main hardware/nxp hardware/qcom-caf/common/fwk-detect
+============================================
+MaheshTechnicals@Ubuntu:~/pixelOS$ mka bacon -j$(nproc --all)
+build/make/core/soong_config.mk:199: warning: BOARD_PLAT_PUBLIC_SEPOLICY_DIR has been deprecated. Use SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS instead.
+build/make/core/soong_config.mk:200: warning: BOARD_PLAT_PRIVATE_SEPOLICY_DIR has been deprecated. Use SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS instead.
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=12
+CUSTOM_VERSION=PixelOS_miatoll-12.1-20220405-1251
+TARGET_PRODUCT=aosp_miatoll
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm64
+TARGET_ARCH_VARIANT=armv8-2a
+TARGET_CPU_VARIANT=cortex-a76
+TARGET_2ND_ARCH=arm
+TARGET_2ND_ARCH_VARIANT=armv8-2a
+TARGET_2ND_CPU_VARIANT=cortex-a76
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-5.13.0-1021-azure-x86_64-Ubuntu-20.04.4-LTS
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+    0:10 writing build rules ...
+
+
+
+e/commonsys-intf/display vendor/qcom/opensource/display vendor/qcom/opensource/data-ipa-cfg-mgr vendor/qcom/opensource/dataservices vendor/qcom/opensource/commonsys/packages/apps/Bluetooth vendor/qcom/opensource/commonsys/system/bt/conf vendor/qcom/opensource/commonsys/system/bt/main hardware/nxp ha$(shell date -u +%H) was changed, regenerating...
+[ 28% 95/329] including frameworks/base/Android.mk ...      [ 56% 186/329] including system/sepolicy/Android.mk ...     system/sepolicy/Android.mk:57: warning: BOARD_PLAT_PUBLIC_SEPOLICY_DIR has been deprecated. Use SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS instead.
+system/sepolicy/Android.mk:62: warning: BOARD_PLAT_PRIVATE_SEPOLICY_DIR has been deprecated. Use SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS instead.
+system/sepolicy/Android.mk:148: warning: Be careful when usi[100% 329/329] writing build rules ...                      build/make/core/base_rules.mk:525: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/soong_cc_prebuilt.mk:172: warning: overriding commands for target `out/target/product/miatoll/symbols/vendor/lib64/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/soong_cc_prebuilt.mk:172: warning: ignoring old commands for target `out/target/product/miatoll/symbols/vendor/lib64/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/base_rules.mk:525: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/soong_cc_prebuilt.mk:172: warning: overriding commands for target `out/target/product/miatoll/symbols/vendor/lib/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/soong_cc_prebuilt.mk:172: warning: ignoring old commands for target `out/target/product/miatoll/symbols/vendor/lib/vendor.qti.hardware.vibrator.impl.so'
+build/make/core/base_rules.mk:525: warning: overriding commands for target `out/target/product/miatoll/vendor/bin/hw/vendor.qti.hardware.vibrator.service'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/bin/hw/vendor.qti.hardware.vibrator.service'
+build/make/core/base_rules.mk:552: warning: overriding commands for target `out/target/product/miatoll/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc'
+build/make/core/base_rules.mk:552: warning: ignoring old commands for target `out/target/product/miatoll/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc'
+build/make/core/base_rules.mk:588: warning: overriding commands for target `out/target/product/miatoll/vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml'
+build/make/core/base_rules.mk:588: warning: ignoring old commands for target `out/target/product/miatoll/vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml'
+build/make/core/soong_cc_prebuilt.mk:172: warning: overriding commands for target `out/target/product/miatoll/symbols/vendor/bin/hw/vendor.qti.hardware.vibrator.service'
+build/make/core/soong_cc_prebuilt.mk:172: warning: ignoring old commands for target `out/target/product/miatoll/symbols/vendor/bin/hw/vendor.qti.hardware.vibrator.service'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/system/bin/charger'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/system/bin/charger'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/android.hardware.camera.provider@2.4-legacy.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/android.hardware.camera.provider@2.4-legacy.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/liba2dpoffload.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/liba2dpoffload.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libbatterylistener.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libbatterylistener.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libcirrusspkrprot.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libcirrusspkrprot.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libcomprcapture.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libcomprcapture.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libexthwplugin.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libexthwplugin.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libhdmiedid.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libhdmiedid.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libhfp.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libhfp.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libqsap_sdk.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libqsap_sdk.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libsndmonitor.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libsndmonitor.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libspkrprot.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libspkrprot.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/libtinycompress.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/libtinycompress.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/soundfx/libaudiopreprocessing.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/soundfx/libaudiopreprocessing.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/soundfx/libqcompostprocbundle.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/soundfx/libqcompostprocbundle.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/soundfx/libqcomvisualizer.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/soundfx/libqcomvisualizer.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/soundfx/libqcomvoiceprocessing.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/soundfx/libqcomvoiceprocessing.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.perf@2.0.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.perf@2.0.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.perf@2.1.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.perf@2.1.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.perf@2.2.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib/vendor.qti.hardware.perf@2.2.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/liba2dpoffload.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/liba2dpoffload.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libbatterylistener.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libbatterylistener.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libcirrusspkrprot.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libcirrusspkrprot.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libcomprcapture.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libcomprcapture.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libexthwplugin.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libexthwplugin.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libhfp.so'build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libhfp.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libqsap_sdk.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libqsap_sdk.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libsndmonitor.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libsndmonitor.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libspkrprot.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libspkrprot.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/libtinycompress.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/libtinycompress.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libaudiopreprocessing.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libaudiopreprocessing.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libqcompostprocbundle.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libqcompostprocbundle.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libqcomvisualizer.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libqcomvisualizer.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libqcomvoiceprocessing.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/soundfx/libqcomvoiceprocessing.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.perf@2.0.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.perf@2.0.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.perf@2.1.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.perf@2.1.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.perf@2.2.so'
+build/make/core/base_rules.mk:525: warning: ignoring old commands for target `out/target/product/miatoll/vendor/lib64/vendor.qti.hardware.perf@2.2.so'
+build/make/core/Makefile:61: warning: overriding commands for target `out/target/product/miatoll/system/etc/libnfc-nci.c[ 94% 330/348] build out/target/product/miatoll/obj/KERNEL_ ninja: Missing `restat`? An output file is older than the most recent input:
+ output: out/target/product/miatoll/obj/KERNEL_OBJ/.additional_config
+  input: out/target/product/miatoll/obj/KERNEL_OBJ
+[ 96% 335/348] Building Kernel Config                       make: Entering directory '/home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250'
+make[1]: Entering directory '/home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/KERNEL_OBJ'
+  GEN     ./Makefile
+#
+# configuration written to .config
+#
+make[1]: Leaving directory '/home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/KERNEL_OBJ'
+make: Leaving directory '/home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250'
+make: Entering directory '/home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250'
+make[1]: Entering directory '/home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/KERNEL_OBJ'
+  GEN     ./Makefile
+scripts/kconfig/conf  --savedefconfig=defconfig Kconfig
+make[1]: Leaving directory '/home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/KERNEL_OBJ'
+[ 97% 341/348] Building Kernel Image (Image.gz-dtb)         make: Entering directory '/home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250'
+make[1]: Entering directory '/home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/KERNEL_OBJ'
+  GEN     ./Makefile
+scripts/kconfig/conf  --silentoldconfig Kconfig
+  CHK     include/config/kernel.release
+  GEN     ./Makefile
+  CHK     include/generated/uapi/linux/version.h
+  Using /home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250 as source for kernel
+  CHK     include/generated/utsrelease.h
+  CHK     scripts/mod/devicetable-offsets.h
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CHK     include/generated/asm-offsets.h
+  CALL    /home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250/scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CHK     kernel/config_data.h
+  CHK     kernel/kheaders_data.tar.xz
+  GEN     kernel/kheaders_data.tar.xz
+  DTC     arch/arm64/boot/dts/qcom/cust-atoll-ab.dtb
+  DTC     arch/arm64/boot/dts/qcom/curtana-atoll-ab-idp-overlay.dtbo
+  DTC     arch/arm64/boot/dts/qcom/excalibur-atoll-ab-idp-overlay.dtbo
+  DTC     arch/arm64/boot/dts/qcom/gram-atoll-ab-idp-overlay.dtbo
+  DTC     arch/arm64/boot/dts/qcom/joyeuse-atoll-ab-idp-overlay.dtbo
+  CC      kernel/kheaders.o
+  AR      kernel/built-in.o
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  AR      init/built-in.o
+  AR      built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  KSYM    .tmp_kallsyms1.o
+  KSYM    .tmp_kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  OBJCOPY arch/arm64/boot/Image
+  GZIP    arch/arm64/boot/Image.gz
+  DTC     arch/arm64/boot/dts/qcom/cust-atoll-ab.dtb
+  CAT     arch/arm64/boot/Image.gz-dtb
+make[1]: Leaving directory '/home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/KERNEL_OBJ'
+make: Leaving directory '/home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250'
+    7:52 Package target files: out/target/product/miatoll/o 
+
+
+
+
+  CHK     include/generated/utsrelease.h
+  Using /home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250 as source for kernel
+  CHK     scripts/mod/devicetable-offsets.h
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CHK     include/generated/asm-offsets.h
+  CALL    /home/MaheshTechnicals/pixelOS/kernel/xiaomi/sm6250/scripts/checksyscalls.sh
+  DTC     arch/arm64/boot/dts/qcom/cust-atoll-ab.dtb
+  DTC     arch/arm64/boot/dts/qcom/curtana-atoll-ab-idp-overlay.dtbo
+  DTC     arch/arm64/boot/dts/qcom/excalibur-atoll-ab-idp-overlay.dtbo
+  DTC     arch/arm64/boot/dts/qcom/gram-atoll-ab-idp-overlay[ 99% 346/348] Package target files: out/target/product/mia ls: out/target/product/miatoll/install: No such file or directory
+ls: out/target/product/miatoll/data: No such file or directory
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read SYSTEM/etc/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read VENDOR/etc/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read ODM/etc/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read ODM/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read VENDOR_DLKM/etc/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read VENDOR_DLKM/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read ODM_DLKM/etc/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Failed to read ODM_DLKM/build.prop
+2022-04-05 12:56:30 - common.py - WARNING : Can't find META/ab_partitions.txt
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read SYSTEM/etc/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read VENDOR/etc/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read ODM/etc/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read ODM/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read VENDOR_DLKM/etc/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read VENDOR_DLKM/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read ODM_DLKM/etc/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Failed to read ODM_DLKM/build.prop
+2022-04-05 12:57:28 - common.py - WARNING : Can't find META/ab_partitions.txt
+2022-04-05 12:57:28 - add_img_to_target_files.py - INFO    :
+
+++++ boot  ++++
+
+
+2022-04-05 12:57:28 - common.py - INFO    : using prebuilt boot.img from IMAGES...
+2022-04-05 12:57:29 - add_img_to_target_files.py - INFO    :
+
+++++ recovery  ++++
+
+
+2022-04-05 12:57:29 - common.py - INFO    : building image from target_files RECOVERY...
+2022-04-05 12:57:31 - add_img_to_target_files.py - INFO    :
+
+++++ recovery (two-step image)  ++++
+
+
+2022-04-05 12:57:31 - common.py - INFO    : building image from target_files RECOVERY...
+2022-04-05 12:57:34 - add_img_to_target_files.py - INFO    :
+
+++++ system  ++++
+
+
+2022-04-05 12:57:34 - add_img_to_target_files.py - INFO    : creating system.img...
+2022-04-05 12:57:35 - build_image.py - INFO    : The tree size of /home/MaheshTechnicals/pixelOS/out/soong/.temp/tmpHoPxv5 is 821 MB.
+2022-04-05 12:57:35 - build_image.py - INFO    : First Pass based on estimates of 2621 MB and -1 inodes.
+2022-04-05 12:57:59 - build_image.py - INFO    : Not worth reducing image 1840701440 <= 1887436800.
+2022-04-05 12:58:02 - verity_utils.py - INFO    : CalculateMinPartitionSize(2748735488): partition_size 2792894464.
+2022-04-05 12:58:02 - build_image.py - INFO    : Allocating 2663 MB for /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/system.img.
+2022-04-05 12:58:50 - add_img_to_target_files.py - INFO    :
+
+++++ vendor  ++++
+
+
+2022-04-05 12:58:50 - add_img_to_target_files.py - INFO    : creating vendor.img...
+2022-04-05 12:58:50 - build_image.py - INFO    : The tree size of /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/VENDOR is 1217 MB.
+2022-04-05 12:58:50 - build_image.py - INFO    : First Pass based on estimates of 1317 MB and 2625 inodes.
+2022-04-05 12:59:23 - build_image.py - INFO    : Allocating 2491 Inodes for /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/vendor.img.2022-04-05 12:59:25 - verity_utils.py - INFO    : CalculateMinPartitionSize(1366286336): partition_size 1388273664.
+2022-04-05 12:59:25 - build_image.py - INFO    : Allocating 1323 MB for /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/vendor.img.
+2022-04-05 13:00:01 - add_img_to_target_files.py - INFO    :
+
+++++ product  ++++
+
+
+2022-04-05 13:00:01 - add_img_to_target_files.py - INFO    : creating product.img...
+2022-04-05 13:00:01 - build_image.py - INFO    : The tree size of /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/PRODUCT is 1608 MB.
+2022-04-05 13:00:01 - build_image.py - INFO    : First Pass based on estimates of 3408 MB and -1 inodes.
+2022-04-05 13:00:43 - build_image.py - INFO    : Not worth reducing image 1835859968 <= 1887436800.
+2022-04-05 13:00:45 - verity_utils.py - INFO    : CalculateMinPartitionSize(3574304768): partition_size 3631693824.
+2022-04-05 13:00:45 - build_image.py - INFO    : Allocating 3463 MB for /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/product.img.
+2022-04-05 13:01:47 - add_img_to_target_files.py - INFO    :
+
+++++ system_ext  ++++
+
+
+2022-04-05 13:01:47 - add_img_to_target_files.py - INFO    : creating system_ext.img...
+2022-04-05 13:01:47 - build_image.py - INFO    : The tree size of /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/SYSTEM_EXT is 290 MB.
+2022-04-05 13:01:47 - build_image.py - INFO    : First Pass based on estimates of 390 MB and 301 inodes.
+2022-04-05 13:01:58 - build_image.py - INFO    : Not worth reducing image 104198144 <= 104857600.
+2022-04-05 13:01:58 - build_image.py - INFO    : Allocating 295 Inodes for /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/system_ext.img.
+2022-04-05 13:02:00 - verity_utils.py - INFO    : CalculateMinPartitionSize(409751552): partition_size 416407552.
+2022-04-05 13:02:00 - build_image.py - INFO    : Allocating 397 MB for /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/system_ext.img.
+2022-04-05 13:02:32 - add_img_to_target_files.py - INFO    :
+
+++++ userdata  ++++
+
+
+2022-04-05 13:02:32 - add_img_to_target_files.py - INFO    : creating userdata.img...
+2022-04-05 13:02:33 - common.py - INFO    :   userdata size (165) is 0.00% of limit (112421842944)
+2022-04-05 13:02:33 - add_img_to_target_files.py - INFO    :
+
+++++ cache  ++++
+
+
+2022-04-05 13:02:33 - add_img_to_target_files.py - INFO    : creating cache.img...
+2022-04-05 13:02:33 - common.py - INFO    :   cache size (162) is 0.00% of limit (402653184)
+2022-04-05 13:02:33 - add_img_to_target_files.py - INFO    :
+
+++++ dtbo  ++++
+
+
+2022-04-05 13:02:34 - add_img_to_target_files.py - INFO    :
+
+++++ vbmeta_system  ++++
+
+
+2022-04-05 13:02:34 - add_img_to_target_files.py - INFO    :
+
+++++ vbmeta  ++++
+
+
+2022-04-05 13:02:35 - add_img_to_target_files.py - INFO    :
+
+++++ super_empty  ++++
+
+
+2022-04-05 13:02:35 - build_super_image.py - INFO    : Building super image from info dict...
+2022-04-05 13:02:35 - build_super_image.py - INFO    : Done writing image /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/IMAGES/super_empty.img
+2022-04-05 13:02:35 - add_img_to_target_files.py - INFO    :
+
+++++ radio  ++++
+
+
+2022-04-05 13:02:35 - add_img_to_target_files.py - INFO    :[ 99% 347/348] Package OTA: out/target/product/miatoll/aosp FAILED: out/target/product/miatoll/aosp_miatoll-ota-eng.MaheshTechnicals.zip out/target/product/miatoll/ota_metadata
+/bin/bash -c "PATH=out/host/linux-x86/bin/:system/extras/ext4_utils/:out/soong/host/linux-x86/bin/:\$PATH out/host/linux-x86/bin/ota_from_target_files --verbose --extracted_input_target_files out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals --path out/host/linux-x86  -k build/make/target/product/security/testkey --output_metadata_path out/target/product/miatoll/ota_metadata out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals.zip out/target/product/miatoll/aosp_miatoll-ota-eng.MaheshTechnicals.zip"
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read SYSTEM/etc/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read VENDOR/etc/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read ODM/etc/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read ODM/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read VENDOR_DLKM/etc/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read VENDOR_DLKM/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read ODM_DLKM/etc/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Failed to read ODM_DLKM/build.prop
+2022-04-05 13:04:05 - common.py - WARNING : Can't find META/ab_partitions.txt
+2022-04-05 13:04:05 - ota_from_target_files.py - INFO    : --- target info ---
+2022-04-05 13:04:05 - common.py - INFO    : allow_non_ab              = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_avbtool               = (str) avbtool
+2022-04-05 13:04:05 - common.py - INFO    : avb_boot_add_hash_footer_args = (str) --prop com.android.build.boot.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.boot.os_version:12
+2022-04-05 13:04:05 - common.py - INFO    : avb_boot_salt             = (str) 8ffd0416cbfbf78ac17f3f8498efdccb273584ff5bad6c601d6fadb9ae1db7e1
+2022-04-05 13:04:05 - common.py - INFO    : avb_building_vbmeta_image = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_dtbo_add_hash_footer_args = (str) --prop com.android.build.dtbo.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys
+2022-04-05 13:04:05 - common.py - INFO    : avb_enable                = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_odm_add_hashtree_footer_args = (str) --prop com.android.build.odm.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.odm.os_version:12
+2022-04-05 13:04:05 - common.py - INFO    : avb_odm_dlkm_add_hashtree_footer_args = (str) --prop com.android.build.odm_dlkm.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.odm_dlkm.os_version:12
+2022-04-05 13:04:05 - common.py - INFO    : avb_odm_dlkm_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_odm_dlkm_salt         = (str) acb333c37910f6467bef252f5472051de13475e7ed55f20ea2d3e4de81acdf7f
+2022-04-05 13:04:05 - common.py - INFO    : avb_odm_hashtree_enable   = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_odm_salt              = (str) acb333c37910f6467bef252f5472051de13475e7ed55f20ea2d3e4de81acdf7f
+2022-04-05 13:04:05 - common.py - INFO    : avb_product_add_hashtree_footer_args = (str) --prop com.android.build.product.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.product.os_version:12 --prop com.android.build.product.security_patch:2022-03-05
+2022-04-05 13:04:05 - common.py - INFO    : avb_product_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_product_salt          = (str) 8ffd0416cbfbf78ac17f3f8498efdccb273584ff5bad6c601d6fadb9ae1db7e1
+2022-04-05 13:04:05 - common.py - INFO    : avb_recovery_add_hash_footer_args = (str) --prop com.android.build.recovery.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --rollback_index 1646438400
+2022-04-05 13:04:05 - common.py - INFO    : avb_recovery_algorithm    = (str) SHA256_RSA2048
+2022-04-05 13:04:05 - common.py - INFO    : avb_recovery_key_path     = (str) external/avb/test/data/testkey_rsa2048.pem2022-04-05 13:04:05 - common.py - INFO    : avb_recovery_rollback_index_location = (str) 1
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_add_hashtree_footer_args = (str) --prop com.android.build.system.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.system.os_version:12 --prop com.android.build.system.security_patch:2022-03-05
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_ext_add_hashtree_footer_args = (str) --prop com.android.build.system_ext.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.system_ext.os_version:12 --prop com.android.build.system_ext.security_patch:2022-03-05
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_ext_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_ext_salt       = (str) 8ffd0416cbfbf78ac17f3f8498efdccb273584ff5bad6c601d6fadb9ae1db7e1
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_other_add_hashtree_footer_args = (str)
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_other_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_system_salt           = (str) acb333c37910f6467bef252f5472051de13475e7ed55f20ea2d3e4de81acdf7f
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_algorithm      = (str) SHA256_RSA4096
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_args           = (str) --set_hashtree_disabled_flag --flags 2 --padding_size 4096
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_key_path       = (str) external/avb/test/data/testkey_rsa4096.pem2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_system         = (str) system product
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_system_algorithm = (str) SHA256_RSA2048
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_system_args    = (str) --padding_size 4096 --rollback_index 1646438400
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_system_key_path = (str) external/avb/test/data/testkey_rsa2048.pem
+2022-04-05 13:04:05 - common.py - INFO    : avb_vbmeta_system_rollback_index_location = (str) 1
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_add_hashtree_footer_args = (str) --prop com.android.build.vendor.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.vendor.os_version:12 --prop com.android.build.vendor.security_patch:2021-06-01
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_boot_add_hash_footer_args = (str) --prop com.android.build.vendor_boot.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_dlkm_add_hashtree_footer_args = (str) --prop com.android.build.vendor_dlkm.fingerprint:Xiaomi/miatoll/miatoll:12/SP2A.220305.013.A3/0400:userdebug/test-keys --prop com.android.build.vendor_dlkm.os_version:12
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_dlkm_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_dlkm_salt      = (str) acb333c37910f6467bef252f5472051de13475e7ed55f20ea2d3e4de81acdf7f
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_hashtree_enable = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : avb_vendor_salt           = (str) 8ffd0416cbfbf78ac17f3f8498efdccb273584ff5bad6c601d6fadb9ae1db7e1
+2022-04-05 13:04:05 - common.py - INFO    : blockimgdiff_versions     = (str) 3,4
+2022-04-05 13:04:05 - common.py - INFO    : blocksize                 = (int) 131072
+2022-04-05 13:04:05 - common.py - INFO    : board_builds_vendorimage  = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : board_uses_vendorimage    = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : boot.build.prop           = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0eae50>
+2022-04-05 13:04:05 - common.py - INFO    : boot_images               = (str) boot.img
+2022-04-05 13:04:05 - common.py - INFO    : boot_size                 = (int) 134217728
+2022-04-05 13:04:05 - common.py - INFO    : build.prop                = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0b9bd0>
+2022-04-05 13:04:05 - common.py - INFO    : build_super_empty_partition = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : build_super_partition     = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : building_cache_image      = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : building_product_image    = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : building_system_ext_image = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : building_system_image     = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : building_userdata_image   = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : building_vendor_image     = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : cache_fs_type             = (str) ext4
+2022-04-05 13:04:05 - common.py - INFO    : cache_selinux_fc          = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : cache_size                = (int) 402653184
+2022-04-05 13:04:05 - common.py - INFO    : default_system_dev_certificate = (str) build/make/target/product/security/testkey
+2022-04-05 13:04:05 - common.py - INFO    : dtbo_size                 = (str) 8388608
+2022-04-05 13:04:05 - common.py - INFO    : dynamic_partition_list    = (str)  system system_ext vendor product
+2022-04-05 13:04:05 - common.py - INFO    : erofs_sparse_flag         = (str) -s
+2022-04-05 13:04:05 - common.py - INFO    : ext_mkuserimg             = (str) mkuserimg_mke2fs
+2022-04-05 13:04:05 - common.py - INFO    : extfs_sparse_flag         = (str) -s
+2022-04-05 13:04:05 - common.py - INFO    : f2fs_sparse_flag          = (str) -S
+2022-04-05 13:04:05 - common.py - INFO    : fs_type                   = (str) ext4
+2022-04-05 13:04:05 - common.py - INFO    : fstab                     = (dict) {'/metadata': <common.Partition object at 0x7fe11f0b9dd0>, 'none': <common.Partition object at 0x7fe11f0d3050>, '/product': <common.Partition object at 0x7fe11f0b9c90>, '/vendor/firmware_mnt': <common.Partition object at 0x7fe11f0b9e90>, '/cache': <common.Partition object at 0x7fe11f0b9d10>, '/boot': <common.Partition object at 0x7fe11f0b9d50>, '/system': <common.Partition object at 0x7fe11f0b9c50>, '/system_ext': <common.Partition object at 0x7fe11f0b9c10>, '/misc': <common.Partition object at 0x7fe11f0b9f90>, '/vendor/bt_firmware': <common.Partition object at 0x7fe11f0b9f50>, '/mnt/vendor/persist': <common.Partition object at 0x7fe11f0b9ed0>, '/vendor/dsp': <common.Partition object at 0x7fe11f0b9f10>, '/data': <common.Partition object at 0x7fe11f0b9e50>, '/vendor': <common.Partition object at 0x7fe11f0b9cd0>}
+2022-04-05 13:04:05 - common.py - INFO    : fstab_version             = (int) 2
+2022-04-05 13:04:05 - common.py - INFO    : has_dtbo                  = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : include_recovery_dtbo     = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : lpmake                    = (str) lpmake
+2022-04-05 13:04:05 - common.py - INFO    : mkbootimg_args            = (str) --header_version 2
+2022-04-05 13:04:05 - common.py - INFO    : mkbootimg_version_args    = (str) --os_version 12 --os_patch_level 2022-03-05
+2022-04-05 13:04:05 - common.py - INFO    : multistage_support        = (str) 1
+2022-04-05 13:04:05 - common.py - INFO    : odm.build.prop            = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0e2550>
+2022-04-05 13:04:05 - common.py - INFO    : odm_dlkm.build.prop       = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0eaf90>
+2022-04-05 13:04:05 - common.py - INFO    : oem_selinux_fc            = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : ota_override_device       = (str) curtana,excalibur,gram,joyeuse
+2022-04-05 13:04:05 - common.py - INFO    : product.build.prop        = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0d3e10>
+2022-04-05 13:04:05 - common.py - INFO    : product_extfs_inode_count = (str) -1
+2022-04-05 13:04:05 - common.py - INFO    : product_fs_type           = (str) ext4
+2022-04-05 13:04:05 - common.py - INFO    : product_reserved_size     = (str) 1887436800
+2022-04-05 13:04:05 - common.py - INFO    : product_selinux_fc        = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : recovery_api_version      = (int) 3
+2022-04-05 13:04:05 - common.py - INFO    : recovery_mkbootimg_args   = (str) --header_version 2
+2022-04-05 13:04:05 - common.py - INFO    : recovery_mount_options    = (str) ext4=max_batch_time=0,commit=1,data=ordered,barrier=1,errors=panic,nodelalloc
+2022-04-05 13:04:05 - common.py - INFO    : recovery_size             = (int) 134217728
+2022-04-05 13:04:05 - common.py - INFO    : root_dir                  = (str) out/target/product/miatoll/root
+2022-04-05 13:04:05 - common.py - INFO    : squashfs_sparse_flag      = (str) -s
+2022-04-05 13:04:05 - common.py - INFO    : super_block_devices       = (str) super
+2022-04-05 13:04:05 - common.py - INFO    : super_metadata_device     = (str) super
+2022-04-05 13:04:05 - common.py - INFO    : super_partition_groups    = (str) qti_dynamic_partitions
+2022-04-05 13:04:05 - common.py - INFO    : super_partition_size      = (str) 8589934592
+2022-04-05 13:04:05 - common.py - INFO    : super_qti_dynamic_partitions_group_size = (str) 8585740288
+2022-04-05 13:04:05 - common.py - INFO    : super_qti_dynamic_partitions_partition_list = (str)  system system_ext vendor product
+2022-04-05 13:04:05 - common.py - INFO    : super_super_device_size   = (str) 8589934592
+2022-04-05 13:04:05 - common.py - INFO    : system.build.prop         = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0b9bd0>
+2022-04-05 13:04:05 - common.py - INFO    : system_ext.build.prop     = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0d3fd0>
+2022-04-05 13:04:05 - common.py - INFO    : system_ext_fs_type        = (str) ext4
+2022-04-05 13:04:05 - common.py - INFO    : system_ext_reserved_size  = (str) 104857600
+2022-04-05 13:04:05 - common.py - INFO    : system_ext_selinux_fc     = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : system_extfs_inode_count  = (str) -1
+2022-04-05 13:04:05 - common.py - INFO    : system_fs_type            = (str) ext4
+2022-04-05 13:04:05 - common.py - INFO    : system_reserved_size      = (str) 1887436800
+2022-04-05 13:04:05 - common.py - INFO    : system_selinux_fc         = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : tool_extensions           = (str) device/xiaomi/sm6250-common
+2022-04-05 13:04:05 - common.py - INFO    : use_dynamic_partition_size = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : use_dynamic_partitions    = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : use_set_metadata          = (str) 1
+2022-04-05 13:04:05 - common.py - INFO    : userdata_fs_type          = (str) f2fs
+2022-04-05 13:04:05 - common.py - INFO    : userdata_selinux_fc       = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : userdata_size             = (int) 112421842944
+2022-04-05 13:04:05 - common.py - INFO    : vbmeta_digest             = (str) 46da3a4bc0c9dbbbfe146e6071ce094d481c6b5d21ff2457f3f414e7ad9f8d5e
+2022-04-05 13:04:05 - common.py - INFO    : vendor.build.prop         = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0b9a10>
+2022-04-05 13:04:05 - common.py - INFO    : vendor_dlkm.build.prop    = (PartitionBuildProps) <common.PartitionBuildProps object at 0x7fe11f0eae90>
+2022-04-05 13:04:05 - common.py - INFO    : vendor_fs_type            = (str) ext4
+2022-04-05 13:04:05 - common.py - INFO    : vendor_reserved_size      = (str) 104857600
+2022-04-05 13:04:05 - common.py - INFO    : vendor_selinux_fc         = (str) out/target/product/miatoll/obj/ETC/file_contexts.bin_intermediates/file_contexts.bin
+2022-04-05 13:04:05 - common.py - INFO    : vintf_enforce             = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : vintf_include_empty_vendor_sku = (str) true
+2022-04-05 13:04:05 - common.py - INFO    : vintf_odm_manifest_skus   = (str) joyeuse
+2022-04-05 13:04:05 - non_ab_ota.py - INFO    : (using device-specific extensions from target_files)
+2022-04-05 13:04:05 - common.py - INFO    : loaded device-specific extensions from /home/MaheshTechnicals/pixelOS/out/target/product/miatoll/obj/PACKAGING/target_files_intermediates/aosp_miatoll-target_files-eng.MaheshTechnicals/META/releasetools.py
+2022-04-05 13:04:05 - sparse_img.py - INFO    : Total of 681859 4096-byte output blocks in 34 input chunks.
+2022-04-05 13:04:07 - blockimgdiff.py - INFO    : Finding transfers...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    : Generating digraph...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    : Finding vertex sequence...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    : Reversing backward edges...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    :   0/0 dependencies (0.00%) were violated; 0 source blocks stashed.
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    : Improving vertex order...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:09 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:12 - blockimgdiff.py - INFO    : Reticulating splines...
+2022-04-05 13:04:13 - blockimgdiff.py - INFO    :  909193216  909193216 (100.00%)     new __DATA 0-184 504-32770 33272-65536 66038-98306 98808-131072 131574-163842 164344-196608 197110-214655 229376-229377 294912-294913 655360 671078-681711 681858
+2022-04-05 13:04:13 - blockimgdiff.py - INFO    : max stashed blocks: 0  (0 bytes), limit: 322122547 bytes (0.00%)
+
+2022-04-05 13:04:13 - blockimgdiff.py - INFO    :   Imgdiff Stats Report
+2022-04-05 13:04:13 - blockimgdiff.py - INFO    : ========================
+
+2022-04-05 13:04:13 - sparse_img.py - INFO    : Total of 338934 4096-byte output blocks in 29 input chunks.
+2022-04-05 13:04:15 - blockimgdiff.py - INFO    : Finding transfers...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    : Generating digraph...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    : Finding vertex sequence...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    : Reversing backward edges...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    :   0/0 dependencies (0.00%) were violated; 0 source blocks stashed.
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    : Improving vertex order...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:19 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:23 - blockimgdiff.py - INFO    : Reticulating splines...
+2022-04-05 13:04:24 - blockimgdiff.py - INFO    : 1283051520 1283051520 (100.00%)     new __DATA 0-307921 327680-327687 327697-327723 333566-338852 338933
+2022-04-05 13:04:24 - blockimgdiff.py - INFO    : max stashed blocks: 0  (0 bytes), limit: 322122547 bytes (0.00%)
+
+2022-04-05 13:04:24 - blockimgdiff.py - INFO    :   Imgdiff Stats Report
+2022-04-05 13:04:24 - blockimgdiff.py - INFO    : ========================
+
+2022-04-05 13:04:24 - sparse_img.py - INFO    : Total of 886644 4096-byte output blocks in 50 input chunks.
+2022-04-05 13:04:25 - blockimgdiff.py - INFO    : Finding transfers...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    : Generating digraph...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    : Finding vertex sequence...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    : Reversing backward edges...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    :   0/0 dependencies (0.00%) were violated; 0 source blocks stashed.
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    : Improving vertex order...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:30 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:36 - blockimgdiff.py - INFO    : Reticulating splines...
+2022-04-05 13:04:38 - blockimgdiff.py - INFO    : 1739214848 1739214848 (100.00%)     new __DATA 0-36 509-32770 33277-65536 66043-98306 98813-131072 131579-163842 164349-196608 197115-229378 229885-262144 262651-294914 295421-327680 328187-360448 360955-393216 393723-417324 819200-819201 851968 872633-886460 886643
+2022-04-05 13:04:38 - blockimgdiff.py - INFO    : max stashed blocks: 0  (0 bytes), limit: 322122547 bytes (0.00%)
+
+2022-04-05 13:04:38 - blockimgdiff.py - INFO    :   Imgdiff Stats Report
+2022-04-05 13:04:38 - blockimgdiff.py - INFO    : ========================
+
+2022-04-05 13:04:38 - sparse_img.py - INFO    : Total of 101662 4096-byte output blocks in 15 input chunks.
+2022-04-05 13:04:38 - blockimgdiff.py - INFO    : Finding transfers...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    : Generating digraph...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    : Finding vertex sequence...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    : Reversing backward edges...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    :   0/0 dependencies (0.00%) were violated; 0 source blocks stashed.
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    : Improving vertex order...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    : Revising stash size...
+2022-04-05 13:04:39 - blockimgdiff.py - INFO    :   Total 0 blocks (0 bytes) are packed as new blocks due to insufficient cache size. Maximum blocks stashed simultaneously: 0
+2022-04-05 13:04:40 - blockimgdiff.py - INFO    : Reticulating splines...
+2022-04-05 13:04:41 - blockimgdiff.py - INFO    :  312061952  312061952 (100.00%)     new __DATA 0-74561 98304-98311 98313-98339 100037-101625 101661
+2022-04-05 13:04:41 - blockimgdiff.py - INFO    : max stashed blocks: 0  (0 bytes), limit: 322122547 bytes (0.00%)
+
+2022-04-05 13:04:41 - blockimgdiff.py - INFO    :   Imgdiff Stats Report
+2022-04-05 13:04:41 - blockimgdiff.py - INFO    : ========================
+
+2022-04-05 13:04:41 - common.py - INFO    : using prebuilt recovery.img from IMAGES...
+Traceback (most recent call last):
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/internal/stdlib/runpy.py", line 174, in _run_module_as_main
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/internal/stdlib/runpy.py", line 72, in _run_code
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/__main__.py", line 12, in <module>
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/internal/stdlib/runpy.py", line 174, in _run_module_as_main
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/internal/stdlib/runpy.py", line 72, in _run_code
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/ota_from_target_files.py", line 1496, in <module>
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/ota_from_target_files.py", line 1476, in main
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/non_ab_ota.py", line 624, in GenerateNonAbOtaPackage
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/non_ab_ota.py", line 199, in WriteFullOTAPackage
+  File "/home/MaheshTechnicals/pixelOS/out/host/linux-x86/bin/ota_from_target_files/common.py", line 2332, in CheckSize
+KeyError: '/recovery'
+13:04:43 ninja failed with: exit status 1
+
+#### failed to build some targets (13:24 (mm:ss)) ####      MaheshTechnicals@Ubuntu:~/pixelOS$
